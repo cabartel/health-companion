@@ -79,7 +79,13 @@ function addScore(score, notes = '', date = null) {
     const scores = loadScores();
     
     const d = date ? new Date(date) : new Date();
-    const week = `${d.getFullYear()}-${d.getISOWeek()}`;
+    // Calculate ISO week manually
+    const dObj = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+    const dayNum = dObj.getUTCDay() || 7;
+    dObj.setUTCDate(dObj.getUTCDate() + 4 - dayNum);
+    const yearStart = new Date(Date.UTC(dObj.getUTCFullYear(), 0, 1));
+    const isoWeek = Math.floor((dObj - yearStart) / 86400000 / 7 + 1);
+    const week = `${d.getFullYear()}-${isoWeek}`;
     
     const entry = {
         week,
