@@ -1,0 +1,48 @@
+{
+  "categories": {
+    "me-cfs": {
+      "label": "ME/CFS",
+      "benchmarks": [
+        {"id": "sleep-duration", "label": "Sleep Duration", "unit": "hours", "type": "number"},
+        {"id": "sleep-quality", "label": "Sleep Quality", "type": "scale", "min": 1, "max": 10},
+        {"id": "fatigue", "label": "Fatigue", "type": "scale", "min": 1, "max": 10},
+        {"id": "brain-fog", "label": "Brain Fog", "type": "scale", "min": 1, "max": 10},
+        {"id": "pem", "label": "PEM", "type": "scale", "min": 1, "max": 10},
+        {"id": "pain", "label": "Pain", "type": "scale", "min": 1, "max": 10},
+        {"id": "dizziness", "label": "Dizziness", "type": "scale", "min": 1, "max": 10},
+        {"id": "nausea", "label": "Nausea", "type": "scale", "min": 1, "max": 10}
+      ]
+    },
+    "diabetes": {
+      "label": "Diabetes",
+      "benchmarks": [
+        {"id": "blood-sugar", "label": "Blood Sugar", "unit": "mg/dL", "type": "number"},
+        {"id": "hypo-episodes", "label": "Hypoglycemic Episodes", "type": "count"},
+        {"id": "hyper-episodes", "label": "Hyperglycemic Episodes", "type": "count"},
+        {"id": "energy", "label": "Energy", "type": "scale", "min": 1, "max": 10}
+      ]
+    },
+    "falls": {
+      "label": "Fall Risk",
+      "benchmarks": [
+        {"id": "falls", "label": "Falls", "type": "count"},
+        {"id": "near-falls", "label": "Near Falls", "type": "count"},
+        {"id": "balance", "label": "Balance", "type": "scale", "min": 1, "max": 10},
+        {"id": "mobility", "label": "Mobility", "type": "scale", "min": 1, "max": 10}
+      ]
+    },
+    "mental-health": {
+      "label": "Mental Health",
+      "benchmarks": [
+        {"id": "mood", "label": "Mood", "type": "scale", "min": 1, "max": 10},
+        {"id": "anxiety", "label": "Anxiety", "type": "scale", "min": 1, "max": 10},
+        {"id": "sleep", "label": "Sleep", "type": "scale", "min": 1, "max": 10},
+        {"id": "medication-adherence", "label": "Medication Adherence", "type": "scale", "min": 1, "max": 10}
+      ]
+    },
+    "custom": {
+      "label": "Custom",
+      "benchmarks": []
+    }
+  }
+}
